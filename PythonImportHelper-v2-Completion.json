@@ -1,0 +1,128 @@
+[
+    {
+        "label": "pyaudio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyaudio",
+        "description": "pyaudio",
+        "detail": "pyaudio",
+        "documentation": {}
+    },
+    {
+        "label": "pyttsx3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pyttsx3",
+        "description": "pyttsx3",
+        "detail": "pyttsx3",
+        "documentation": {}
+    },
+    {
+        "label": "speech_recognition",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "speech_recognition",
+        "description": "speech_recognition",
+        "detail": "speech_recognition",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "wikipedia",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "wikipedia",
+        "description": "wikipedia",
+        "detail": "wikipedia",
+        "documentation": {}
+    },
+    {
+        "label": "webbrowser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "webbrowser",
+        "description": "webbrowser",
+        "detail": "webbrowser",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib",
+        "description": "smtplib",
+        "detail": "smtplib",
+        "documentation": {}
+    },
+    {
+        "label": "speak",
+        "kind": 2,
+        "importPath": "import pyaudio",
+        "description": "import pyaudio",
+        "peekOfCode": "def speak(audio):\n    engine.say(audio)\n    engine.runAndWait()\ndef wishMe():\n    hour = int(datetime.datetime.now().hour)\n    if hour>=0 and hour<12:\n        speak(\"Good Morning!\")\n    elif hour>=12 and hour<18:\n        speak(\"Good Afternoon!\")\n    else:",
+        "detail": "import pyaudio",
+        "documentation": {}
+    },
+    {
+        "label": "wishMe",
+        "kind": 2,
+        "importPath": "import pyaudio",
+        "description": "import pyaudio",
+        "peekOfCode": "def wishMe():\n    hour = int(datetime.datetime.now().hour)\n    if hour>=0 and hour<12:\n        speak(\"Good Morning!\")\n    elif hour>=12 and hour<18:\n        speak(\"Good Afternoon!\")\n    else:\n        speak(\"Good Evening!\")\n    speak(\"I am Chat Boat. Please tell me how may I help you\")\ndef takeCommand():",
+        "detail": "import pyaudio",
+        "documentation": {}
+    },
+    {
+        "label": "takeCommand",
+        "kind": 2,
+        "importPath": "import pyaudio",
+        "description": "import pyaudio",
+        "peekOfCode": "def takeCommand():\n    #It takes microphone input from the user and returns string output\n    r = sr.Recognizer()\n    with sr.Microphone() as source:\n        print(\"Listening...\")\n        r.pause_threshold = 1\n        audio = r.listen(source)\n    try:\n        print(\"Recognizing...\")\n        query = r.recognize_google(audio, language='en-in')",
+        "detail": "import pyaudio",
+        "documentation": {}
+    },
+    {
+        "label": "sendEmail",
+        "kind": 2,
+        "importPath": "import pyaudio",
+        "description": "import pyaudio",
+        "peekOfCode": "def sendEmail(to, content):\n    server = smtplib.SMTP('smtp.gmail.com', 587)\n    server.ehlo()\n    server.starttls()\n    server.login('arungowda5544@gmail.com', '9964398183')\n    server.sendmail('arungowda5544@gmail.com', to, content)\n    server.close()\nif __name__ == \"__main__\":\n    wishMe()\n    while True:",
+        "detail": "import pyaudio",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "import pyaudio",
+        "description": "import pyaudio",
+        "peekOfCode": "engine = pyttsx3.init('sapi5')\nvoices = engine.getProperty('voices')\n# print(voices[1].id)\nengine.setProperty('voice', voices[0].id)\ndef speak(audio):\n    engine.say(audio)\n    engine.runAndWait()\ndef wishMe():\n    hour = int(datetime.datetime.now().hour)\n    if hour>=0 and hour<12:",
+        "detail": "import pyaudio",
+        "documentation": {}
+    },
+    {
+        "label": "voices",
+        "kind": 5,
+        "importPath": "import pyaudio",
+        "description": "import pyaudio",
+        "peekOfCode": "voices = engine.getProperty('voices')\n# print(voices[1].id)\nengine.setProperty('voice', voices[0].id)\ndef speak(audio):\n    engine.say(audio)\n    engine.runAndWait()\ndef wishMe():\n    hour = int(datetime.datetime.now().hour)\n    if hour>=0 and hour<12:\n        speak(\"Good Morning!\")",
+        "detail": "import pyaudio",
+        "documentation": {}
+    }
+]
